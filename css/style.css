@@ -79,4 +79,17 @@ h1 {
     transform: translate(0, 0);
   }
 
-  
+/********* PASSWORD CONTAINER ***************/
+
+  #random-password {
+    width: 300px;
+    padding: 30px 3px;
+    height: 100px;
+    background-color: #374151;
+    border-radius: 6px;
+    color: white;
+    text-align: center;
+    margin: auto;
+    word-break: break-all; /* to stop overflow, characters are placed on a new line when limit of container is reached */
+    user-select: all; /* user can select all paragraph content with one click */
+  }
