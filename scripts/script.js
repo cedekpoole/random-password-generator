@@ -118,9 +118,48 @@ function generatePassword() {
   }
   // tell the user how many characters they have picked
   alert(`Your password will have ${passwordLength} characters`);
+
   // ask the user which character type to include (lowercase, uppercase, numeric and/or special characters
   // - make the user pick at least one)
+  var charArray = [];
+  var checkUpperCase = false;
+  var checkLowerCase = false;
+  var checkNumbers = false;
+  var checkSpecialChars = false;
+
+  // create a character type function
+  function charType() {
+    alert("You must pick at least one of the following character types: ");
+    checkUpperCase = confirm("Click OK to include uppercase characters");
+    checkLowerCase = confirm("Click OK to include lowercase characters");
+    checkNumbers = confirm("Click OK to include numbers");
+    checkSpecialChars = confirm("Click OK to include special characters");
+  }
+
+  // force the user to pick at least one of the following options
+  while (
+    !checkUpperCase &&
+    !checkLowerCase &&
+    !checkNumbers &&
+    !checkSpecialChars
+  ) {
+    charType();
+  }
+
   // concatenate the chosen character types and store them in an array
+  if (checkUpperCase) {
+    charArray = charArray.concat(upperCaseChar);
+  }
+  if (checkLowerCase) {
+    charArray = charArray.concat(lowerCaseChar);
+  }
+  if (checkNumbers) {
+    charArray = charArray.concat(numberChar);
+  }
+  if (checkSpecialChars) {
+    charArray = charArray.concat(specialChar);
+  }
+
   // create a function that picks a random item from an array
   // for the length of the password, pick the items from the character array at random
 }
