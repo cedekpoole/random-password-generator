@@ -1,25 +1,40 @@
 /********* GLOBAL ***************/
-:root {
-    --background-col: #1F2937;
-    --secondary: #E11D48;
 
+:root {
+  /* Use css variables for colors */
+  --background-col: #1f2937;
+  --secondary: #e11d48;
 }
 
 body {
-    font-family: Inter, sans-serif;
-    background-color: var(--background-col);
-    color: white;
+  font-family: Inter, sans-serif;
+  background-color: var(--background-col);
+  color: white;
 }
 
 hr {
-    height: 0;
-    border: 0.5px solid black;
-    margin: 5px 45px;
-    
+  height: 0;
+  border: 0.5px solid black;
+  margin: 5px 45px;
 }
 
 h1 {
-    font-size: 3rem;
+  font-size: 3rem;
 }
 
 /********* CONTENT CONTAINER ***************/
+
+.container {
+  display: flex;
+  flex-direction: column;
+  border: 4px solid black;
+  width: 90vw;
+  margin: 50px auto;
+  padding: 20px;
+  box-shadow: 11px 10px 23px -10px rgba(0, 0, 0, 0.75);
+  max-width: 700px;
+}
+
+.container > * {
+    margin-bottom: 15px;
+  }
