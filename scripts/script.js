@@ -161,5 +161,17 @@ function generatePassword() {
   }
 
   // create a function that picks a random item from an array
+  function randomItem(item) {
+    return item[Math.floor(Math.random() * item.length)];
+  }
+
+  var password = "";
+
   // for the length of the password, pick the items from the character array at random
+  for (i = 0; i < passwordLength; i++) {
+    password += randomItem(charArray);
+  }
+  
+  // print password content to the page
+  randomPasswordEl.textContent = password;
 }
