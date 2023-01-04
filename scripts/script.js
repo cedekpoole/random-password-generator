@@ -147,18 +147,27 @@ function generatePassword() {
   }
 
   // concatenate the chosen character types and store them in an array
-  if (checkUpperCase) {
-    charArray = charArray.concat(upperCaseChar);
-  }
-  if (checkLowerCase) {
-    charArray = charArray.concat(lowerCaseChar);
-  }
-  if (checkNumbers) {
-    charArray = charArray.concat(numberChar);
-  }
-  if (checkSpecialChars) {
-    charArray = charArray.concat(specialChar);
-  }
+  // if (checkUpperCase) {
+  //   charArray = charArray.concat(upperCaseChar);
+  // }
+  // if (checkLowerCase) {
+  //   charArray = charArray.concat(lowerCaseChar);
+  // }
+  // if (checkNumbers) {
+  //   charArray = charArray.concat(numberChar);
+  // }
+  // if (checkSpecialChars) {
+  //   charArray = charArray.concat(specialChar);
+  // }
+  function addToArray(check, typeOfCharacter) {
+    if (check) {
+      return charArray = charArray.concat(typeOfCharacter);
+    }
+  } 
+  addToArray(checkUpperCase, upperCaseChar);
+  addToArray(checkLowerCase, lowerCaseChar);
+  addToArray(checkNumbers, numberChar);
+  addToArray(checkSpecialChars, specialChar);
 
   // create a function that picks a random item from an array
   function randomItem(item) {
