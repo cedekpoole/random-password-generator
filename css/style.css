@@ -62,6 +62,7 @@ h1 {
   position: relative;
   text-align: center;
   user-select: none; /* Controls whether user can select text */
+  color: black;
 }
 /* Create a box that disappears when user hovers over the button */
 #generate-p-button:after {
