@@ -35,6 +35,48 @@ h1 {
   max-width: 700px;
 }
 
-.container > * {
-    margin-bottom: 15px;
+.container > * { /* Give all children in the container a bottom margin of 15px */
+  margin-bottom: 15px;
+}
+
+.color {
+  color: var(--secondary);
+}
+
+/********* GENERATE PASSWORD BUTTON ***************/
+
+#generate-p-button { 
+    align-items: center;
+    background-color: var(--secondary);
+    border: 2px solid black;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    font-size: 20px;
+    height: 46px;
+    justify-content: center;
+    line-height: 24px;
+    width: 70%;
+    margin: 15px auto;
+    position: relative;
+    text-align: center;
+    user-select: none; /* Controls whether user can select text */
   }
+/* Create a box that disappears when user hovers over the button */
+  #generate-p-button:after { 
+    background-color: black;
+    border-radius: 8px;
+    content: "";
+    height: 45px;
+    width: 100%;
+    position: absolute;
+    transform: translate(8px, 8px);
+    transition: transform .3s ease-out;
+    z-index: -1;
+  }
+  
+  #generate-p-button:hover:after {
+    transform: translate(0, 0);
+  }
+
+  
