@@ -99,7 +99,7 @@ function generatePassword() {
 
   // prompt the user for password length (>= 10 || <= 64)
   var lengthPrompt = prompt(
-    "Choose a password length between 10 and 64 characters"
+    "Choose a password length that is between 10 and 64 characters long"
   );
 
   // create a function that converts the string to a number and store it in the 'passwordLength' variable
@@ -130,13 +130,13 @@ function generatePassword() {
   // create a character type function
   function charType() {
     alert("You must pick at least one of the following character types: ");
-    checkUpperCase = confirm("Click OK to include uppercase characters");
-    checkLowerCase = confirm("Click OK to include lowercase characters");
-    checkNumbers = confirm("Click OK to include numbers");
-    checkSpecialChars = confirm("Click OK to include special characters");
+    checkUpperCase = confirm("Click OK to include UPPERCASE characters");
+    checkLowerCase = confirm("Click OK to include LOWERCASE characters");
+    checkNumbers = confirm("Click OK to include NUMBERS");
+    checkSpecialChars = confirm("Click OK to include SPECIAL characters");
   }
 
-  // force the user to pick at least one of the following options
+  // force the user to pick at least one of the options
   while (
     !checkUpperCase &&
     !checkLowerCase &&
