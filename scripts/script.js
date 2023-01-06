@@ -147,6 +147,8 @@ function generatePassword() {
   }
 
   // concatenate the chosen character types and store them in an array
+
+  // OLD WAY:
   // if (checkUpperCase) {
   //   charArray = charArray.concat(upperCaseChar);
   // }
@@ -159,6 +161,9 @@ function generatePassword() {
   // if (checkSpecialChars) {
   //   charArray = charArray.concat(specialChar);
   // }
+
+  // NEW WAY:
+  // create function that checks whether character type is wanted by user; concatenate char type to a new array
   function addToArray(check, typeOfCharacter) {
     if (check) {
       return charArray = charArray.concat(typeOfCharacter);
