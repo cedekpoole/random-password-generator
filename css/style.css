@@ -13,6 +13,7 @@
 body {
   font-family: Inter, sans-serif;
   background-color: var(--background-col);
+  font-weight: 300;
 }
 
 hr {
@@ -47,6 +48,11 @@ h1 {
   color: var(--secondary);
 }
 
+.text {
+  margin-left: 10px; 
+  font-size: 1rem;
+}
+
 /********* GENERATE PASSWORD BUTTON ***************/
 
 #generate-p-button {
@@ -61,7 +67,7 @@ h1 {
   justify-content: center;
   line-height: 24px;
   width: 200px;
-  margin-right: 10px auto 5px;
+  margin: 10px auto;
   position: relative;
   text-align: center;
   user-select: none; /* Controls whether user can select text */
@@ -97,4 +103,12 @@ h1 {
   margin: 0 auto;
   word-break: break-all; /* to stop overflow, characters are placed on a new line when limit of container is reached */
   user-select: all; /* user can select all paragraph content with one click */
+}
+
+/********* MEDIA QUERIES ***************/
+
+@media screen and (min-width: 532px) {
+  #generate-p-button {
+    margin: 0 auto 10px 10px;
+  }
 }
